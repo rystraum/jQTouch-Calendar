@@ -8,28 +8,31 @@ This is the jQTouch iCal plugin taken apart, refactored into an extension and pu
 HTML
 ----
 Create a list of calendar entries like so:
+<pre><code>
     <div id="any_id">
       <ul>
         <li><time datetime="2011-01-25T21:20Z">Task text here</time></li>
         <li><time datetime="2011-01-25T23:00Z">More task text here</time></li>
         <li><time datetime="2011-03-02T09:30Z">Another task here</time></li>
-		  </ul>
+      </ul>
     </div>
+</code></pre>
 
 Script
 ------
 Use this to initialise:
-	  <script type="text/javascript" charset="utf-8">
-		  var jQT = new $.jQTouch({});
-		  $(function() {
-			  $('#any_id').getCalendar(); //This is the important bit
-      });
-    </script>
-
+<pre><code>
+<script type="text/javascript" charset="utf-8">
+    var jQT = new $.jQTouch({});
+    $(function() {
+        $('#any_id').getCalendar(); //This is the important bit
+    });
+</script>
+</code></pre>
 Options
 -------
 You can also call getCalendar with an options object e.g.
-    $('#any_id').getCalendar({date:variable_x, weekstart:variable_y});
+    ```$('#any_id').getCalendar({date:variable_x, weekstart:variable_y});```
 
  * date: Date around which to render the initial calendar. At start, this date is selected 
    * _(default: new Date())_
